@@ -64,6 +64,28 @@ void ReverseNodeList(Node** ppHead)
     return;
 }
 
+//合并链表
+Node* MergeNodeList(Node* pHead1, Node* pHead2)
+{
+    //边界判断
+    if (pHead1 == NULL)
+        return pHead2;
+    else if (pHead2 == NULL)
+        return pHead1;
+    //将两链表中较小值取出放入新链表，并将剩下两个链表进行合并后接入新链表后面
+    Node* mergeNode = NULL;
+    if (pHead1->value.i < pHead2->value.i) {
+        mergeNode = pHead1;
+        mergeNode->next = MergeNodeList(pHead1->next, pHead2);
+    } else {
+        mergeNode = pHead2;
+        mergeNode->next = MergeNodeList(pHead1, pHead2->next);
+    }
+    return mergeNode;
+}
+
+
+
 void PrintNodeList(Node* pHead)
 {
     Node* currNode = pHead;
@@ -74,13 +96,15 @@ void PrintNodeList(Node* pHead)
 
 int main(void)
 {
-    int a[5] = { 1, 2, 3, 4, 5 };
+    int a[5] = { 1, 3, 5, 7, 9 };
     Node* head = NULL;
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 5; i++)
         InsertNode(&head, *(Value*)(void*)&a[i]);
-    }
-    PrintNodeList(head);
-    ReverseNodeList(&head);
-    PrintNodeList(head);
+    int b[5] = { 2, 4, 6, 8, 10 };
+    Node* head2 = NULL;
+    for (int i = 0; i < 5; i++)
+        InsertNode(&head2, *(Value*)(void*)&b[i]);
+    Node* mergeNode = MergeNodeList(head, head2);
+    PrintNodeList(mergeNode);
     return 0;
 }
