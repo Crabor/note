@@ -1,10 +1,13 @@
-#if sizeof(int) == 2
-typedef long int32;
-#else
-typedef int int32;
-#endif
+#include<string.h>
+#define DUMBCOPY                \
+    for (i = 0; i < 65536; i++) \
+    destination[i] = source[i]
+#define SMARTOPY memcpy(destination, source, 65535)
 
-int main(void)
+int main()
 {
-    return 0;
+    char source[65535], destination[65535];
+    int i, j;
+    for (j = 0; j < 65535; j++)
+        DUMBCOPY;
 }
