@@ -2,7 +2,7 @@ class CPP
 {
 private:
     int i;
-    static float f;
+    float f;
 public:
     CPP();
     CPP(int value);

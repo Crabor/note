@@ -1,13 +1,23 @@
-#include<iostream>
-#include"CPP.h"
+#include "CPP.h"
+#include <iostream>
 
 using namespace std;
 
-int main(void){
-    CPP temp(2);
-    temp.setFloat(2.0);
-    CPP temp2(3);
-    temp2.setFloat(3.0);
-    cout<<temp.getFloat()<<endl;
+class test {
+};
+
+// test::test(/* args */)
+// {
+// }
+
+// test::~test()
+// {
+// }
+
+// void test::func() {}
+
+int main(void)
+{
+    cout << sizeof(test) << endl;
     return 0;
 }
