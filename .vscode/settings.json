@@ -4,6 +4,7 @@
         "*.wxss": "css",
         "*.wxs": "javascript",
         "type_traits": "c",
-        "CPP.C": "cpp"
+        "CPP.C": "cpp",
+        "iostream": "cpp"
     }
 }
