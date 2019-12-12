@@ -758,7 +758,7 @@
 
 1. 命令
 
-    ![vi-vim-cheat-sheet-sch.gif](https://i.loli.net/2019/12/03/LFnrZ4gtHNCod6S.gif)
+    ![vi-vim-cheat-sheet-sch.gif](img/LFnrZ4gtHNCod6S.gif)
 
     | 移动光标的方法 |                                                    |
     | ------------------ | -------------------------------------------------- |
@@ -1114,7 +1114,7 @@
 
 1. C++map哈希表内存模型、读取删除时间复杂度
 
-    ![ ](https://img-blog.csdn.net/20180422203837281?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NpdHlfdG9fc2t5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+    ![ ](img/20180422203837281.png)
 
     上面可以看到Map接口的几个实现方式。简要说明：
 
